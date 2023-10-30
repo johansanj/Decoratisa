@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoratisa</title>
+    <!-- Enlaces a Bootstrap y archivos CSS personalizados -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #ffffff;">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #b56376;">
+            <div class="container">
+                <a class="navbar-brand" href="#" ><img src="/imágenes/logo-d2.png "></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#About">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Catalogo">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                        <li>
+                            <a id="abrir-carrito" href="#" class="nav-link py-0 fas fa-shopping-cart my-2"></a>
+                            <span class="cart-notification" id="cartCount"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- opción inicial -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h2>¿Para que ocasión es tu regalo?</h2>
+                <select id="opciones">
+                    <option></option>
+                    <option value="opcion1">Amor y Amistad</option>
+                    <option value="opcion2">Dia del hombre/padre</option>
+                    <option value="opcion3">Día de la mujer/madre</option>
+                </select>
+                <button class="btn btn-primary my-4" onclick="cerrarVentana()">Aceptar</button>
+            </div>
+        </div>
+
+        <!-- Contenido principal de la página -->
+
+        <!-- Contenido del carrito -->
+        <div id="carrito" class="cart d-none">
+            <div class="card-body">
+                <h3 class="card-title ">Carrito</h3>
+                <ul id="lista-de-compras" class="list-group"></ul>
+                <button class="btn btn-primary mt-2">Pagar</button>
+                <button id="boton-vaciar" class="btn btn-secondary mt-2">Vaciar</button>
+            </div>
+        </div>
+
+        <!-- Sección principal con carrusel de imágenes -->
+        <div id="miCarrusel" class="carousel slide" data-ride="carousel">
+            <!-- Indicadores -->
+            <ul class="carousel-indicators">
+                <li data-target="#miCarrusel" data-slide-to="0" class="active"></li>
+                <li data-target="#miCarrusel" data-slide-to="1"></li>
+                <li data-target="#miCarrusel" data-slide-to="2"></li>
+            </ul>
+            
+                <!-- Imágenes del carrusel -->
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/imágenes/imagen1.jpg" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/imágenes/imagen2.png" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/imágenes/imagen3.png" alt="Imagen 3">
+                </div>
+                </div>
+            
+                <!-- Controles del carrusel -->
+                <a class="carousel-control-prev" href="#miCarrusel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#miCarrusel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+        <div id="About" class="container mt-4 py-5">
+            <h2>Acerca de Nosotros</h2>
+            <p>Encuentra el regalo perfecto para tus seres queridos en ocasiones especiales.</p>
+            <p>¡Descubre el arte de regalar en Decoratisa! Nuestra selección exclusiva de regalos para ocasiones especiales está cuidadosamente diseñada para despertar sonrisas y emociones únicas. Déjanos ser parte de tus momentos más memorables con nuestros detalles únicos y personalizados.</p>
+        </div>
+
+            <!-- Sección de carrito de compras -->
+    <!-- Carrito de Compras (inicialmente oculto) -->
+
+
+    <!-- Sección de Productos -->
+    <section id="Catalogo" class="container my-4">
+        <h2>Catalogo</h2>
+        <!-- Agrega aquí la lista de productos -->
+        <div class="row">
+            <div class="col-md-4">
+                <div id="producto1" class="card mb-4">
+                    <img src="/img_productos/producto1.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">                        
+                        <h5 class="card-title">Rosas Rojas $10</h5>
+                        <p class="card-text">Arreglo con 100 rosas</p>
+                        <button class="btn btn-primary agregar-carrito" data-nombre="Rosas Rojas" data-precio="10">Agregar al Carrito</button>
+                        <a href="#Detalles" class="btn btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="producto2" class="card mb-4">
+                    <img src="/img_productos/producto2.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Ramo de ChocoFresas $20</h5>
+                        <p class="card-text">Deliciosas fresas cubiertas de chocolate</p>
+                        <button class="btn btn-primary agregar-carrito" data-nombre="Ramo de ChocoFresas" data-precio="20">Agregar al Carrito</button>
+                        <a href="#Detalles" class="btn btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div id="producto3" class="col-md-4">
+                <div class="card mb-4">
+                    <img src="/img_productos/producto3.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ancheta 1 $15</h5>
+                        <p class="card-text">Ancheta variada mas rosas</p>
+                        <button class="btn btn-primary agregar-carrito" data-nombre="Ancheta 1" data-precio="15">Agregar al Carrito</button>
+                        <a href="#Detalles" class="btn btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div id="producto4" class="col-md-4">
+                <div class="card mb-4">
+                    <img src="/img_productos/producto4.jpg" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Ancheta 2 $15</h5>
+                        <p class="card-text">Ancheta variada mas peluche</p>
+                        <button class="btn btn-primary agregar-carrito" data-nombre="Ancheta 2" data-precio="15">Agregar al Carrito</button>
+                        <a href="#Detalles" class="btn btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div id="producto5" class="col-md-4">
+                <div class="card mb-4">
+                    <img src="/img_productos/producto5.jpg" class="card-img-top" alt="Producto 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Caja Alegre $15</h5>
+                        <p class="card-text">Caja con cervezas</p>
+                        <button class="btn btn-primary agregar-carrito" data-nombre="Caja Alegre" data-precio="15">Agregar al Carrito</button>
+                        <a href="#Detalles" class="btn btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div id="producto6" class="col-md-4">
+                <div class="card mb-4">
+                    <img src="/img_productos/producto6.jpg" class="card-img-top" alt="Producto 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Rosas y Vino $50</h5>
+                        <p class="card-text">Arreglo de rosas + vino y chocolates</p>
+                        <button class="btn btn-primary agregar-carrito" data-nombre="Rosas y Vino" data-precio="50">Agregar al Carrito</button>
+                        <a href="#Detalles" class="btn btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Agrega más productos aquí -->
+        </div>
+    </section>
+
+    <!-- Sección de Detalles del Producto -->
+    <section id="Detalles" class="container my-4">
+        <h2>Detalles del Producto</h2>
+
+        <div class="detalles-del-producto" id="detalles-del-producto">
+            <!-- Contenido de detalles del producto aquí -->
+        </div>
+    </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="py-5">
+            <div class="container">
+                <h2>Contacto</h2>
+
+                <span class="fab fa-whatsapp"></span>
+                <span>+57 3005552211</span><br>
+                <span class="far fa-envelope"></span>
+                <span>Correo: ventas@decoratisa.com.co</span><br>
+                <span class="fas fa-map-marker-alt"></span>
+                <spanp>Dirección: Cl 9 # 43a - 20, Medellín</span>
+    
+                <!-- Agrega información de contacto -->
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer mt-4 py-2" style="background-color: #b56376; color: #ffffff;">
+        <div id="cookie-banner" class="cookie-banner">
+            Este sitio web utiliza cookies para asegurarse de que obtengas la mejor experiencia en nuestro sitio.
+            <button id="accept-cookie" class="accept-cookie">Aceptar</button>
+        </div>
+        <div class="container">
+            <p>&copy; 2023 Decoratisa</p>
+        </div>
+    </footer>
+    <!-- Scripts de Bootstrap y archivos JavaScript personalizados -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/descripciones.js"></script>
+</body>
+</html>
+
+
+
+

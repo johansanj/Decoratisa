@@ -1,0 +1,164 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    padding: 20px 0;
+}
+
+/* Estilos para ventana emergente */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; 
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos de la pagina */
+
+.navbar {
+    border-radius: 0;
+   /*  position: fixed;
+    top: 10;
+    width: 100%;
+    z-index: 1; */
+}
+
+/* .navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+} */
+
+/* .navbar-toggler-icon {
+    background-color: #ffffff;
+} */
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px;
+}
+
+h1 {
+    color: #b56376;
+}
+
+h3 {
+    font-size:medium;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.carousel-item img {
+    max-width: 60%;
+    max-height: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #b56376;
+
+}
+
+.navbar-brand img {
+    max-width: 30%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.cookie-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+    
+}
+
+.accept-cookie {
+    background-color: #b56376;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cart {
+    position: fixed;
+    top: 80px; 
+    right: 20px;
+    width: 280; 
+    height: auto;
+    background-color: #ffffff;
+    border: 1px solid #7e7e7e;
+    border-radius: 10px;
+    z-index: 3;
+    
+}
+.eliminar-producto {
+    margin-left: 10px;
+}
+
+.container {
+    position: relative;
+}
+
+.cart-notification {
+    display: none;
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -1px;
+    right: 5px;
+}
